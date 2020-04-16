@@ -1,0 +1,5 @@
+gvm-libs (10.0.1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- root <root@0adc3e54db59>  Thu, 20 Feb 2020 02:27:49 +0000
