@@ -7,7 +7,16 @@ Build-Depends: debhelper (>= 11)
 
 Package: gvm-libs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libassuan0,
+         libc6,
+         libgcrypt20,
+         libglib2.0-0,
+         libgpg-error0,
+         libgpgme11,
+         libhiredis0.13,
+         libssh-gcrypt-4,
+         libuuid1,
+         zlib1g
 Description: GVM Libraries Module
  This is the libraries module for the Greenbone Vulnerability Management
  Solution.
