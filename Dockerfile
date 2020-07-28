@@ -24,11 +24,11 @@ RUN set -x && \
   mkdir build && cd build && \
   cmake -DCMAKE_INSTALL_PREFIX=${LIB_INSTALL_PREFIX} .. && make && make install
 RUN set -x && \
-  mkdir -p ${DEB_BUILD_DIR}/gvm-libs-10.0.1/usr/lib && \
-  cp /usr/lib/libgvm*.so.10.0.1 ${DEB_BUILD_DIR}/gvm-libs-10.0.1/usr/lib/ && \
+  mkdir -p ${DEB_BUILD_DIR}/gvm-libs-10.0.2/usr/lib && \
+  cp /usr/lib/libgvm*.so.10.0.* ${DEB_BUILD_DIR}/gvm-libs-10.0.2/usr/lib/ && \
   cd ${DEB_BUILD_DIR} && \
-  tar -czvf gvm-libs_10.0.1.orig.tar.gz gvm-libs-10.0.1
-COPY Debian ${DEB_BUILD_DIR}/gvm-libs-10.0.1
+  tar -czvf gvm-libs_10.0.2.orig.tar.gz gvm-libs-10.0.2
+COPY Debian ${DEB_BUILD_DIR}/gvm-libs-10.0.2
 RUN set -x && \
-  cd ${DEB_BUILD_DIR}/gvm-libs-10.0.1 && \
+  cd ${DEB_BUILD_DIR}/gvm-libs-10.0.2 && \
   debuild -us -uc
