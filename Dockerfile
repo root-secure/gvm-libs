@@ -1,6 +1,7 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 ENV LIB_INSTALL_PREFIX ${LIB_INSTALL_PREFIX:-/usr}
 ENV DEB_BUILD_DIR ${DEB_BUILD_DIR:-/tmp/gvm-libs}
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -q -y --fix-missing \
   tar \
   devscripts \
