@@ -29,8 +29,8 @@ cp /bin/gpgme-json %{buildroot}/bin/
 cp /bin/gpgme-tool %{buildroot}/bin/
 cp /usr/include/gpgme.h %{buildroot}/usr/include/gpgme.h
 cp /lib64/libgpgme.la %{buildroot}/lib64/
-cp /lib64/libgpgme.so %{buildroot}/lib64/
-cp /lib64/libgpgme.so.11 %{buildroot}/lib64/
+ln -s /lib64/libgpgme.so.11.23.0 %{buildroot}/lib64/libgpgme.so
+ln -s /lib64/libgpgme.so.11.23.0 %{buildroot}/lib64/libgpgme.so.11
 cp /lib64/libgpgme.so.11.23.0 %{buildroot}/lib64/
 cp /lib64/pkgconfig/gpgme-glib.pc %{buildroot}/lib64/pkgconfig/
 cp /lib64/pkgconfig/gpgme.pc %{buildroot}/lib64/pkgconfig/

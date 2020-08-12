@@ -23,8 +23,8 @@ mkdir -p %{buildroot}/lib64/pkgconfig
 mkdir -p %{buildroot}/usr/include
 mkdir -p %{buildroot}/share/man/man3/
 cp /lib64/libz.a %{buildroot}/lib64/
-cp /lib64/libz.so %{buildroot}/lib64/
-cp /lib64/libz.so.1 %{buildroot}/lib64/
+ln -s /lib64/libz.so.1.2.11 %{buildroot}/lib64/libz.so
+ln -s /lib64/libz.so.1.2.11 %{buildroot}/lib64/libz.so.1
 cp /lib64/libz.so.1.2.11 %{buildroot}/lib64/
 cp /lib64/pkgconfig/zlib.pc %{buildroot}/lib64/pkgconfig/zlib.pc
 cp /usr/include/zconf.h %{buildroot}/usr/include/

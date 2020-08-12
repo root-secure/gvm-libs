@@ -30,8 +30,8 @@ mkdir %{buildroot}/share/info
 cp /bin/libassuan-config %{buildroot}/bin/
 cp /usr/include/assuan.h %{buildroot}/usr/include/
 cp /lib64/libassuan.la %{buildroot}/lib64/
-cp /lib64/libassuan.so %{buildroot}/lib64/
-cp /lib64/libassuan.so.0 %{buildroot}/lib64/
+ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/libassuan.so
+ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/libassuan.so.0
 cp /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/
 cp /lib64/pkgconfig/libassuan.pc %{buildroot}/lib64/pkgconfig/
 cp /share/aclocal/libassuan.m4 %{buildroot}/share/aclocal/

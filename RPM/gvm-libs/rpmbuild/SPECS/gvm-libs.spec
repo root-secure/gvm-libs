@@ -24,13 +24,30 @@ functionalities to support the integrated service daemons.
 mkdir -p %{buildroot}/lib64/pkgconfig
 cp /lib64/pkgconfig/libgvm_base.pc %{buildroot}/lib64/pkgconfig/libgvm_base.pc
 cp /lib64/libgvm*.so.10.0.2 %{buildroot}/lib64/
+ln -s /lib64/libgvm_base.so.10.0.2 %{buildroot}/lib64/libgvm_base.so
+ln -s /lib64/libgvm_base.so.10.0.2 %{buildroot}/lib64/libgvm_base.so.10
+ln -s /lib64/libgvm_gmp.so.10.0.2 %{buildroot}/lib64/libgvm_gmp.so
+ln -s /lib64/libgvm_gmp.so.10.0.2 %{buildroot}/lib64/libgvm_gmp.so.10
+ln -s /lib64/libgvm_osp.so.10.0.2 %{buildroot}/lib64/libgvm_osp.so
+ln -s /lib64/libgvm_osp.so.10.0.2 %{buildroot}/lib64/libgvm_osp.so.10
+ln -s /lib64/libgvm_util.so.10.0.2 %{buildroot}/lib64/libgvm_util.so
+ln -s /lib64/libgvm_util.so.10.0.2 %{buildroot}/lib64/libgvm_util.so.10
 
 %files
 /lib64/pkgconfig/libgvm_base.pc
+/lib64/libgvm_base.so
+/lib64/libgvm_base.so.10
 /lib64/libgvm_base.so.10.0.2
+/lib64/libgvm_util.so
+/lib64/libgvm_util.so.10
 /lib64/libgvm_util.so.10.0.2
+/lib64/libgvm_osp.so
+/lib64/libgvm_osp.so.10
 /lib64/libgvm_osp.so.10.0.2
+/lib64/libgvm_gmp.so
+/lib64/libgvm_gmp.so.10
 /lib64/libgvm_gmp.so.10.0.2
 
 %changelog
 * Wed Aug 5 2020 aschryver Arctic Wolf Networks
+-
