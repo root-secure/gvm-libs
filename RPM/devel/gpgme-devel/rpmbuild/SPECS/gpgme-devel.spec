@@ -30,8 +30,8 @@ cp /bin/gpgme-json %{buildroot}/opt/awn/bin/
 cp /bin/gpgme-tool %{buildroot}/opt/awn/bin/
 cp /usr/include/gpgme.h %{buildroot}/opt/awn/usr/include/gpgme.h
 cp /lib64/libgpgme.la %{buildroot}/opt/awn/lib64/
-ln -s /lib64/libgpgme.so.11.23.0 %{buildroot}/opt/awn/lib64/libgpgme.so
-ln -s /lib64/libgpgme.so.11.23.0 %{buildroot}/opt/awn/lib64/libgpgme.so.11
+ln -s /opt/awn/lib64/libgpgme.so.11.23.0 %{buildroot}/opt/awn/lib64/libgpgme.so
+ln -s /opt/awn/lib64/libgpgme.so.11.23.0 %{buildroot}/opt/awn/lib64/libgpgme.so.11
 cp /lib64/libgpgme.so.11.23.0 %{buildroot}/opt/awn/lib64/
 cp /lib64/pkgconfig/gpgme-glib.pc %{buildroot}/opt/awn/lib64/pkgconfig/
 cp /lib64/pkgconfig/gpgme.pc %{buildroot}/opt/awn/lib64/pkgconfig/

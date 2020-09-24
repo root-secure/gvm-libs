@@ -24,8 +24,8 @@ mkdir -p %{buildroot}/opt/awn/usr/include
 mkdir -p %{buildroot}/opt/awn/share/man/man3/
 mkdir -p %{buildroot}/etc/ld.so.conf.d
 cp /lib64/libz.a %{buildroot}/opt/awn/lib64/
-ln -s /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so
-ln -s /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so.1
+ln -s /opt/awn/lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so
+ln -s /opt/awn/lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so.1
 cp /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/
 cp /lib64/pkgconfig/zlib.pc %{buildroot}/opt/awn/lib64/pkgconfig/zlib.pc
 cp /usr/include/zconf.h %{buildroot}/opt/awn/usr/include/

@@ -31,8 +31,8 @@ mkdir -p %{buildroot}/etc/ld.so.conf.d
 cp /bin/libassuan-config %{buildroot}/opt/awn/bin/
 cp /usr/include/assuan.h %{buildroot}/opt/awn/usr/include/
 cp /lib64/libassuan.la %{buildroot}/opt/awn/lib64/
-ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so
-ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so.0
+ln -s /opt/awn/lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so
+ln -s /opt/awn/lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so.0
 cp /lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/
 cp /lib64/pkgconfig/libassuan.pc %{buildroot}/opt/awn/lib64/pkgconfig/
 cp /share/aclocal/libassuan.m4 %{buildroot}/opt/awn/share/aclocal/

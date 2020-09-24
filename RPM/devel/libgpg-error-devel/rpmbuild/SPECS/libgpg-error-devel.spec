@@ -61,8 +61,8 @@ cp /bin/yat2m %{buildroot}/opt/awn/bin/
 cp /usr/include/gpg-error.h %{buildroot}/opt/awn/usr/include/
 cp /usr/include/gpgrt.h %{buildroot}/opt/awn/usr/include/
 cp /lib64/libgpg-error.la %{buildroot}/opt/awn/lib64/
-ln -s /lib64/libgpg-error.so.0.29.0 %{buildroot}/opt/awn/lib64/libgpg-error.so
-ln -s /lib64/libgpg-error.so.0.29.0 %{buildroot}/opt/awn/lib64/libgpg-error.so.0
+ln -s /opt/awn/lib64/libgpg-error.so.0.29.0 %{buildroot}/opt/awn/lib64/libgpg-error.so
+ln -s /opt/awn/lib64/libgpg-error.so.0.29.0 %{buildroot}/opt/awn/lib64/libgpg-error.so.0
 cp /lib64/libgpg-error.so.0.29.0 %{buildroot}/opt/awn/lib64/
 cp /lib64/pkgconfig/gpg-error.pc %{buildroot}/opt/awn/lib64/pkgconfig/
 cp /share/aclocal/gpg-error.m4 %{buildroot}/opt/awn/share/aclocal/

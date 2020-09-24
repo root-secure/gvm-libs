@@ -32,8 +32,8 @@ mkdir -p %{buildroot}/etc/ld.so.conf.d
 cp /usr/include/uuid/uuid.h %{buildroot}/opt/awn/usr/include/uuid/
 cp /lib64/libuuid.la %{buildroot}/opt/awn/lib64/
 cp /lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/
-ln -s /lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so
-ln -s /lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so.1
+ln -s /opt/awn/lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so
+ln -s /opt/awn/lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so.1
 cp /share/man/man3/uuid.3 %{buildroot}/opt/awn/share/man/man3/
 cp /share/man/man3/uuid_clear.3 %{buildroot}/opt/awn/share/man/man3/
 cp /share/man/man3/uuid_compare.3 %{buildroot}/opt/awn/share/man/man3/
