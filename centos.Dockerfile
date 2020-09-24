@@ -74,6 +74,8 @@ COPY RPM/gvm-libs/rpmbuild .
 RUN set -x && \
   rpmbuild -bb SPECS/gvm-libs.spec
 WORKDIR ${ZLIB_DEVEL_RPM_BUILD_DIR}
+COPY RPM/devel/ld.so.conf /
+
 COPY RPM/devel/zlib-devel/rpmbuild .
 RUN set -x && \
   rpmbuild -bb SPECS/zlib-devel.spec

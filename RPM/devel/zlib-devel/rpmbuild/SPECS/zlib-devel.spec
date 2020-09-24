@@ -19,27 +19,30 @@ to develop programs that use the zlib compression and decompression
 library.
 
 %install
-mkdir -p %{buildroot}/lib64/pkgconfig
-mkdir -p %{buildroot}/usr/include
-mkdir -p %{buildroot}/share/man/man3/
-cp /lib64/libz.a %{buildroot}/lib64/
-ln -s /lib64/libz.so.1.2.11 %{buildroot}/lib64/libz.so
-ln -s /lib64/libz.so.1.2.11 %{buildroot}/lib64/libz.so.1
-cp /lib64/libz.so.1.2.11 %{buildroot}/lib64/
-cp /lib64/pkgconfig/zlib.pc %{buildroot}/lib64/pkgconfig/zlib.pc
-cp /usr/include/zconf.h %{buildroot}/usr/include/
-cp /usr/include/zlib.h %{buildroot}/usr/include/
-cp /share/man/man3/zlib.3 %{buildroot}/share/man/man3/
+mkdir -p %{buildroot}/opt/awn/lib64/pkgconfig
+mkdir -p %{buildroot}/opt/awn/usr/include
+mkdir -p %{buildroot}/opt/awn/share/man/man3/
+mkdir -p %{buildroot}/etc/ld.so.conf.d
+cp /lib64/libz.a %{buildroot}/opt/awn/lib64/
+ln -s /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so
+ln -s /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/libz.so.1
+cp /lib64/libz.so.1.2.11 %{buildroot}/opt/awn/lib64/
+cp /lib64/pkgconfig/zlib.pc %{buildroot}/opt/awn/lib64/pkgconfig/zlib.pc
+cp /usr/include/zconf.h %{buildroot}/opt/awn/usr/include/
+cp /usr/include/zlib.h %{buildroot}/opt/awn/usr/include/
+cp /share/man/man3/zlib.3 %{buildroot}/opt/awn/share/man/man3/
+cp /ld.so.conf %{buildroot}/etc/ld.so.conf.d/zlib.conf
 
 %files
-/lib64/libz.a
-/lib64/libz.so
-/lib64/libz.so.1
-/lib64/libz.so.1.2.11
-/lib64/pkgconfig/zlib.pc
-/usr/include/zconf.h
-/usr/include/zlib.h
-/share/man/man3/zlib.3
+/opt/awn/lib64/libz.a
+/opt/awn/lib64/libz.so
+/opt/awn/lib64/libz.so.1
+/opt/awn/lib64/libz.so.1.2.11
+/opt/awn/lib64/pkgconfig/zlib.pc
+/opt/awn/usr/include/zconf.h
+/opt/awn/usr/include/zlib.h
+/opt/awn/share/man/man3/zlib.3
+/etc/ld.so.conf.d/zlib.conf
 
 %changelog
 * Wed Aug 5 2020 aschryver Arctic Wolf Networks
