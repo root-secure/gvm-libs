@@ -20,35 +20,38 @@ packages.
 This package contains files needed to develop applications using libassuan.
 
 %install
-mkdir %{buildroot}/bin
-mkdir -p %{buildroot}/usr/include
-mkdir %{buildroot}/lib64
-mkdir %{buildroot}/lib64/pkgconfig
-mkdir %{buildroot}/share
-mkdir %{buildroot}/share/aclocal
-mkdir %{buildroot}/share/info
-cp /bin/libassuan-config %{buildroot}/bin/
-cp /usr/include/assuan.h %{buildroot}/usr/include/
-cp /lib64/libassuan.la %{buildroot}/lib64/
-ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/libassuan.so
-ln -s /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/libassuan.so.0
-cp /lib64/libassuan.so.0.8.3 %{buildroot}/lib64/
-cp /lib64/pkgconfig/libassuan.pc %{buildroot}/lib64/pkgconfig/
-cp /share/aclocal/libassuan.m4 %{buildroot}/share/aclocal/
-cp /share/info/assuan.info %{buildroot}/share/info/
-cp /share/info/dir %{buildroot}/share/info/
+mkdir -p %{buildroot}/opt/awn/bin
+mkdir -p %{buildroot}/opt/awn/usr/include
+mkdir -p %{buildroot}/opt/awn/lib64
+mkdir -p %{buildroot}/opt/awn/lib64/pkgconfig
+mkdir -p %{buildroot}/opt/awn/share
+mkdir -p %{buildroot}/opt/awn/share/aclocal
+mkdir -p %{buildroot}/opt/awn/share/info
+mkdir -p %{buildroot}/etc/ld.so.conf.d
+cp /bin/libassuan-config %{buildroot}/opt/awn/bin/
+cp /usr/include/assuan.h %{buildroot}/opt/awn/usr/include/
+cp /lib64/libassuan.la %{buildroot}/opt/awn/lib64/
+ln -s /opt/awn/lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so
+ln -s /opt/awn/lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/libassuan.so.0
+cp /lib64/libassuan.so.0.8.3 %{buildroot}/opt/awn/lib64/
+cp /lib64/pkgconfig/libassuan.pc %{buildroot}/opt/awn/lib64/pkgconfig/
+cp /share/aclocal/libassuan.m4 %{buildroot}/opt/awn/share/aclocal/
+cp /share/info/assuan.info %{buildroot}/opt/awn/share/info/
+cp /share/info/dir %{buildroot}/opt/awn/share/info/
+cp /ld.so.conf %{buildroot}/etc/ld.so.conf.d/libassuan.conf
 
 %files
-/bin/libassuan-config
-/usr/include/assuan.h
-/lib64/libassuan.la
-/lib64/libassuan.so
-/lib64/libassuan.so.0
-/lib64/libassuan.so.0.8.3
-/lib64/pkgconfig/libassuan.pc
-/share/aclocal/libassuan.m4
-/share/info/assuan.info
-/share/info/dir
+/opt/awn/bin/libassuan-config
+/opt/awn/usr/include/assuan.h
+/opt/awn/lib64/libassuan.la
+/opt/awn/lib64/libassuan.so
+/opt/awn/lib64/libassuan.so.0
+/opt/awn/lib64/libassuan.so.0.8.3
+/opt/awn/lib64/pkgconfig/libassuan.pc
+/opt/awn/share/aclocal/libassuan.m4
+/opt/awn/share/info/assuan.info
+/opt/awn/share/info/dir
+/etc/ld.so.conf.d/libassuan.conf
 
 %changelog
 * Wed Aug 5 2020 aschryver Arctic Wolf Networks

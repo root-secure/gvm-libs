@@ -25,45 +25,48 @@ short lifetime, to reliably identifying very persistent objects
 across a network.
 
 %install
-mkdir -p %{buildroot}/usr/include/uuid/
-mkdir -p %{buildroot}/lib64/pkgconfig
-mkdir -p %{buildroot}/share/man/man3
-cp /usr/include/uuid/uuid.h %{buildroot}/usr/include/uuid/
-cp /lib64/libuuid.la %{buildroot}/lib64/
-cp /lib64/libuuid.so.1.3.0 %{buildroot}/lib64/
-ln -s /lib64/libuuid.so.1.3.0 %{buildroot}/lib64/libuuid.so
-ln -s /lib64/libuuid.so.1.3.0 %{buildroot}/lib64/libuuid.so.1
-cp /share/man/man3/uuid.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_clear.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_compare.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_copy.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_generate.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_generate_random.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_generate_time.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_generate_time_safe.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_is_null.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_parse.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_time.3 %{buildroot}/share/man/man3/
-cp /share/man/man3/uuid_unparse.3 %{buildroot}/share/man/man3/
+mkdir -p %{buildroot}/opt/awn/usr/include/uuid/
+mkdir -p %{buildroot}/opt/awn/lib64/pkgconfig
+mkdir -p %{buildroot}/opt/awn/share/man/man3
+mkdir -p %{buildroot}/etc/ld.so.conf.d
+cp /usr/include/uuid/uuid.h %{buildroot}/opt/awn/usr/include/uuid/
+cp /lib64/libuuid.la %{buildroot}/opt/awn/lib64/
+cp /lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/
+ln -s /opt/awn/lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so
+ln -s /opt/awn/lib64/libuuid.so.1.3.0 %{buildroot}/opt/awn/lib64/libuuid.so.1
+cp /share/man/man3/uuid.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_clear.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_compare.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_copy.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_generate.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_generate_random.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_generate_time.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_generate_time_safe.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_is_null.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_parse.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_time.3 %{buildroot}/opt/awn/share/man/man3/
+cp /share/man/man3/uuid_unparse.3 %{buildroot}/opt/awn/share/man/man3/
+cp /ld.so.conf %{buildroot}/etc/ld.so.conf.d/libuuid.conf
 
 %files
-/usr/include/uuid/uuid.h
-/lib64/libuuid.la
-/lib64/libuuid.so
-/lib64/libuuid.so.1
-/lib64/libuuid.so.1.3.0
-/share/man/man3/uuid.3
-/share/man/man3/uuid_clear.3
-/share/man/man3/uuid_compare.3
-/share/man/man3/uuid_copy.3
-/share/man/man3/uuid_generate.3
-/share/man/man3/uuid_generate_random.3
-/share/man/man3/uuid_generate_time.3
-/share/man/man3/uuid_generate_time_safe.3
-/share/man/man3/uuid_is_null.3
-/share/man/man3/uuid_parse.3
-/share/man/man3/uuid_time.3
-/share/man/man3/uuid_unparse.3
+/opt/awn/usr/include/uuid/uuid.h
+/opt/awn/lib64/libuuid.la
+/opt/awn/lib64/libuuid.so
+/opt/awn/lib64/libuuid.so.1
+/opt/awn/lib64/libuuid.so.1.3.0
+/opt/awn/share/man/man3/uuid.3
+/opt/awn/share/man/man3/uuid_clear.3
+/opt/awn/share/man/man3/uuid_compare.3
+/opt/awn/share/man/man3/uuid_copy.3
+/opt/awn/share/man/man3/uuid_generate.3
+/opt/awn/share/man/man3/uuid_generate_random.3
+/opt/awn/share/man/man3/uuid_generate_time.3
+/opt/awn/share/man/man3/uuid_generate_time_safe.3
+/opt/awn/share/man/man3/uuid_is_null.3
+/opt/awn/share/man/man3/uuid_parse.3
+/opt/awn/share/man/man3/uuid_time.3
+/opt/awn/share/man/man3/uuid_unparse.3
+/etc/ld.so.conf.d/libuuid.conf
 
 %changelog
 * Wed Aug 5 2020 aschryver Arctic Wolf Networks
