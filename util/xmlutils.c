@@ -1206,6 +1206,7 @@ parse_entity (const char *string, entity_t *entity)
 
   /* Parse the string. */
 
+  /* AWN NOTE: This function call takes many HOURS on 250+ MB strings */
   g_markup_parse_context_parse (xml_context, string, strlen (string), &error);
   if (error)
     {
