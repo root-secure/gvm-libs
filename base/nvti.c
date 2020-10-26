@@ -1129,3 +1129,14 @@ nvtis_lookup (nvtis_t *nvtis, const char *oid)
 {
   return g_hash_table_lookup (nvtis, oid);
 }
+
+/**
+ * @brief Measure the size of a collection.
+ *
+ * @return The number of NVT Infos in a collection.
+ */
+unsigned int
+nvtis_count (nvtis_t *nvtis)
+{
+  return g_hash_table_size (nvtis);
+}

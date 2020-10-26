@@ -199,4 +199,7 @@ nvtis_add (nvtis_t *, nvti_t *);
 nvti_t *
 nvtis_lookup (nvtis_t *, const char *);
 
+unsigned int
+nvtis_count (nvtis_t *nvtis);
+
 #endif /* not _NVTI_H */
