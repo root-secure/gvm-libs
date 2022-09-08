@@ -88,6 +88,12 @@
  */
 #define G_LOG_DOMAIN "libgvm base"
 
+#undef G_LOG_DOMAIN
+/**
+ * @brief GLib log domain.
+ */
+#define G_LOG_DOMAIN "libgvm base"
+
 /* Static Headers. */
 
 static double

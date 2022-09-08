@@ -36,6 +36,12 @@
  */
 #define G_LOG_DOMAIN "libgvm base"
 
+#undef G_LOG_DOMAIN
+/**
+ * @brief GLib log domain.
+ */
+#define G_LOG_DOMAIN "libgvm base"
+
 /**
  * @brief Access to the executable's name.
  */
